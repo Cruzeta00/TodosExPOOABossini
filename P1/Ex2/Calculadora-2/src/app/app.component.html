@@ -1,0 +1,49 @@
+<mat-toolbar color="primary">
+  Calculadora
+</mat-toolbar>
+<main>
+  <mat-card>
+    <h1>
+      {{title}}!
+    </h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Digite o 1º número</mat-label>
+      <input matInput type="number" [(ngModel)]="num1">
+      <button
+      *ngIf="num1"
+      matSuffix
+      (click)="num1=0">
+
+      <mat-icon>close</mat-icon>
+    </button>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Digite o 2º número</mat-label>
+      <input matInput type="number" [(ngModel)]="num2">
+      <button
+      *ngIf="num2"
+      matSuffix
+      (click)="num2=0">
+      <mat-icon>close</mat-icon>
+    </button>
+    </mat-form-field>
+    <button color="primary" class="operacao" mat-raised-button (click)="adicionar()">+ Adicionar +</button>
+    <button color="primary" class="operacao" mat-raised-button (click)="subtrair()">- Subtrair -</button>
+    <button color="primary" class="operacao" mat-raised-button (click)="multiplicar()">* Multiplicar *</button>
+    <button color="primary" class="operacao" mat-raised-button (click)="dividir()">/ Dividir /</button>
+    <br>
+    <br>
+    <h3>Resultado : {{num3}}</h3>
+  </mat-card>
+  <mat-card>
+    <h1>Descrição</h1>
+    <mat-accordion>
+      <mat-expansion-panel *ngFor="let operacao of operacoes">
+        <mat-expansion-panel-header>{{operacao.nome}}</mat-expansion-panel-header>
+        <p>{{operacao.descricao}}</p>
+        <p>{{operacao.simbolo}}</p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card>
+</main>
