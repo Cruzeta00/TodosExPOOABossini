@@ -12,6 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { LivroListaComponent } from './livros/livro-lista/livro-lista.component';
+import { LivroService } from './livros/livro.service';
 
 
 @NgModule({
@@ -31,7 +32,7 @@ import { LivroListaComponent } from './livros/livro-lista/livro-lista.component'
     MatInputModule,
     MatToolbarModule,
   ],
-  providers: [],
+  providers: [LivroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

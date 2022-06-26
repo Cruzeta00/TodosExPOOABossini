@@ -1,20 +1,20 @@
 <mat-card>
   <h2>Inserção de livros</h2>
   <form (submit)="onAdicionarLivro(livroForm)" #livroForm="ngForm">
-    <mat-form-field>
-    <input type="number" matInput placeholder="id" ngModel name="id"/>
+    <mat-form-field appearance="fill">
+    <input type="number" matInput placeholder="id" ngModel name="id" #idInput/>
     </mat-form-field>
     <br>
-    <mat-form-field>
-    <input type="text" matInput placeholder="título" ngModel name="titulo"/>
+    <mat-form-field appearance="fill">
+    <input type="text" matInput placeholder="título" ngModel name="titulo" #tituloInput/>
     </mat-form-field>
     <br>
-    <mat-form-field>
-    <input type="text" matInput placeholder="autor" ngModel name="autor"/>
+    <mat-form-field appearance="fill">
+    <input type="text" matInput placeholder="autor" ngModel name="autor" #autorInput/>
     </mat-form-field>
     <br>
-    <mat-form-field>
-    <input type="number" matInput placeholder="número de páginas" ngModel name="numPag"/>
+    <mat-form-field appearance="fill">
+    <input type="number" matInput placeholder="número de páginas" ngModel name="numPag" #numPagInput/>
     </mat-form-field>
     <br>
     <button color="primary" mat-raised-button>Inserir Livro</button>
