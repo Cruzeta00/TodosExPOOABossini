@@ -4,6 +4,7 @@ import { LivroInserirComponent } from './livros/livro-inserir/livro-inserir.comp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion'
@@ -26,6 +27,7 @@ import { LivroService } from './livros/livro.service';
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     MatButtonModule,
     MatCardModule,
     MatExpansionModule,
