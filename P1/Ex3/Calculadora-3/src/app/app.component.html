@@ -1,0 +1,39 @@
+<mat-toolbar color="primary">
+  Calculadora 3!
+</mat-toolbar>
+<main>
+  <mat-card>
+    <h1>
+      {{title}}!
+    </h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Digite o 1º número</mat-label>
+      <input matInput type="number" [(ngModel)]="num1">
+      <button
+      *ngIf="num1"
+      matSuffix
+      (click)="num1=0">
+
+      <mat-icon>close</mat-icon>
+    </button>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Digite o 2º número</mat-label>
+      <input matInput type="number" [(ngModel)]="num2">
+      <button
+      *ngIf="num2"
+      matSuffix
+      (click)="num2=0">
+      <mat-icon>close</mat-icon>
+    </button>
+    </mat-form-field>
+    <button color="primary" class="operacao" mat-raised-button (click)="soma()">+ Adicionar +</button>
+    <button color="primary" class="operacao" mat-raised-button (click)="subtrair()">- Subtrair -</button>
+    <button color="primary" class="operacao" mat-raised-button (click)="multiplicar()">* Multiplicar *</button>
+    <button color="primary" class="operacao" mat-raised-button (click)="dividir()">/ Dividir /</button>
+    <br>
+    <br>
+    <h3>Resultado: {{listaOperacoes}}</h3>
+  </mat-card>
+</main>
