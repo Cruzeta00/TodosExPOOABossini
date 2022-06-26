@@ -1,13 +1,27 @@
 const express = require('express')
 const app = express()
 
-app.use((req, res, next) => {
-  console.log("Chegou uma requisição")
-  next()
-})
+const livros = [
+  {
+    id: '1',
+    titulo: 'Senhor dos Anais',
+    autor: 'Jorginho',
+    pagNum: 134
+  },
+  {
+    id: '2',
+    titulo: 'Anais secrétos',
+    autor: 'Bondinho',
+    pagNum: 149
+  },
+]
 
-app.use((req, res) => {
-  res.send('Hello from the Back End (Express)')
+//localhost:3000/api/livros
+app.use('/api/livros', (req, res) => {
+  res.status(200).json({
+    mensagem: "Tudo OK",
+    livros: livros
+  })
 })
 
 module.exports = app
