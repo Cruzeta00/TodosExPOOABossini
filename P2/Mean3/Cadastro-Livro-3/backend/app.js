@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Livro = require('./models/livro');
 
-mongoose.connect('mongodb+srv://Cruzeta:<Jujuba11031996!>@serverpadrao.mwumm.mongodb.net/?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Cruzeta:<juliof@c1l1996>@serverpadrao.mwumm.mongodb.net/?retryWrites=true&w=majority')
 .then(() => {
   console.log("Conexão OK")
 }).catch(() => {
